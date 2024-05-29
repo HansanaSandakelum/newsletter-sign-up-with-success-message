@@ -1,0 +1,174 @@
+@font-face {
+  font-family: MyFont;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+:root{
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: MyFont;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Charcoal-Grey);
+}
+
+.card-1 {
+    width: 840px;
+    /* height: 450px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-side{
+    width: 55%;
+    
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 30px;
+    font-size: 16PX;
+    padding-right: 48px;
+}
+.left h1{
+    font-size: 48px;
+    
+}
+.right-side{
+    width: 45%;
+    /* margin-left: 1rem; */
+}
+.right-side img{
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    /* width: 300px; */
+    
+}
+form label{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+li{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    margin-bottom: 10px;
+    /* list-style-image: url(./assets/images/icon-success.svg);  */
+    
+}
+input{
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid var(--Grey);
+    outline: none;
+}
+form button{
+    padding:13px 30px;
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--Tomato);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-2{
+    background-color: var(--White);
+    width: 380px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 20px;
+
+}
+.hide{
+    display: none;
+}
+
+.card-2 img{
+    width: 48px;
+}
+.card-2 h1{
+    font-weight: 900;
+}
+.card-2 button{
+    padding: 13px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--Tomato);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.card-2 span{
+    font-weight: 800;
+}
+
+
+@media (max-width: 767px) {
+    .card-1{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .card-1 h1{
+        font-size: 30px;
+    }
+    .left-side{
+        width: 100%;
+        padding: 10px;
+        /* height: 400px; */
+    }
+    .right-side img{
+        content: url(./assets/images/illustration-sign-up-mobile.svg);
+    }
+    
+    .right-side{
+        width: 100%;
+        
+    }
+    form button{
+        margin-bottom: 20px;
+    }
+    .card-2{
+        min-height: 100vh;
+    }
+}
